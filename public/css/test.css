@@ -1,0 +1,22 @@
+
+
+
+
+/*MediaNav - User Area*/
+.mediaNav-userArea{
+	
+	min-height: 50px;
+}
+
+.mediaNav-userArea-Name{
+	width: 70%;
+	float:left;
+}
+
+.mediaNav-userArea-Img{
+	width: 30%;
+	float:left;
+}
+/*END MediaNav - User Area*/
+
+

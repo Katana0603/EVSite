@@ -1,0 +1,329 @@
+:root{
+	--text-color: #ffff;
+	--content-color: rgba(33,33,33,0.8);
+	--box-color: #020f18;
+	
+	--lightblue: #63b9f8;
+	--blue: #1A98F5;
+	--darkblue: #086fba;
+	--deepdarkblue: #072d49;
+
+	--lightorange: #f7944b;
+	--orange: #f5771a;
+	--darkorange: #ba5408;
+
+	--green:#4CAF50;
+
+	--red: #FF0000;
+}
+
+*{
+	color: var(--text-color);
+	word-wrap: break-word;
+}
+
+html{
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+}
+
+.smallScreen{
+	display:block;
+	width: 100%;
+}
+
+.bigScreen{
+	display:none;
+}
+
+body{
+	background-color: transparent;
+}
+
+/*Root Layout*/
+
+.header{
+
+}
+
+main{
+	padding-top: 70px;
+}
+
+aside{
+
+}
+
+.aside-left{
+
+}
+
+content{
+
+}
+
+.aside-right{
+
+}
+
+
+footer{
+
+}
+
+
+.disabled{
+	color: currentColor;
+	cursor: not-allowed;
+	opacity: 0.5;
+	text-decoration: none;
+	pointer-events: none;
+}
+
+.center{
+	text-align: center;
+}
+
+.right{
+	float:right;
+}
+
+.left{
+	float:left;
+}
+
+.media-hidden{
+	display:none;
+}
+
+
+/*Root Layout End*/
+
+/*Header*/
+
+.logo-wrapper , .user-box{
+	display : none;
+}
+
+.navbar {
+	/*overflow: hidden;*/
+	position: fixed; /* Set the navbar to fixed position */
+	top: 0; /* Position the navbar at the top of the page */
+	width: 100%; /* Full width */
+	z-index:20;
+	padding-bottom: 10px;
+}
+
+.bg-dark{
+	background-color: var(--deepdarkblue) !important;
+}
+
+.dropdown-menu{
+	background-color: var(--box-color);
+}
+
+
+.dropdown-item{
+	color: var(--orange);
+}
+
+.dropdown-item:focus, .dropdown-item:hover{
+
+	background-color: var(--deepdarkblue);
+	color: var(--orange);
+}
+
+/*Header End*/
+
+.container{
+
+	padding-left:0;
+	padding-right:0;
+}
+
+.content-wrapper{
+	background-color: var(--content-color);
+	/*border: 2px solid var(--darkblue);*/
+
+	border-radius: 5px;
+	padding-top:1%;
+	padding-bottom: 2%;
+
+
+	-webkit-filter: drop-shadow(0px 0px 10px #67c7);
+	filter: drop-shadow(0px 0px 10px #67c7);
+
+}
+
+
+.box{
+	background-color: var(--box-color);
+	position: relative;
+	border:	1px solid var(--blue);
+	box-shadow: 0 0 5px var(--blue);
+	padding:2%;
+	margin-top:2em;
+	margin-bottom: 2em;
+}
+
+
+
+/*NEWS*/
+
+.news-date{
+	display:none
+
+}
+
+.media-trash-btn{
+	background-color:transparent;
+	border-radius:30%;
+	border:none;
+	cursor: pointer;
+}
+
+/*NEWS END*/
+
+
+/*MEDIA + DOWNLOADS*/
+.download-box
+{
+	text-align: center;
+}
+
+.download-box-header
+{
+	font-size: 120%;
+	font-weight: bold;
+}
+
+/*MEDIA + DOWNLOADS END*/
+
+/*Team*/
+.teambox{
+	padding:2%;
+}
+
+.inner-teambox{
+	margin:1%;
+}
+
+.card {
+	border: 1px solid var(--darkblue);
+	margin: auto;
+	text-align: center;
+	padding:1%;
+	margin:1%;
+	background-color: inherit;
+}
+/*TEAM END*/
+
+/*Tickets*/
+
+.tickets{
+	display: -webkit-flex;
+	display: flex;
+	-webkit-justify-content: center;
+	justify-content: center;
+	-webkit-flex-wrap: wrap;
+	flex-wrap: wrap;
+	margin-top: 15px;
+	/*padding: 1.5%;*/
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+}
+.ticket-button{
+	/*height: 100%;*/
+	width: 96%;
+	margin: 2%;
+	padding: 5%;
+	border: 1px solid var(--blue);
+	border-radius: 5px;
+	text-align: center;
+}
+.ticket-button:hover, .ticket-button:focus{
+	background-color: var(--orange);
+	color: var(--text-color);
+
+}
+
+.ticket-button:active, .ticket-button:visited:hover, .ticket-button.selected{
+	background-color: var(--darkorange);
+	color: var(--text-color);
+}
+
+.ticketcol{
+	float: left;
+	width: 100%;
+	padding: 1%;
+}
+
+.ticketprice{
+	/*height: 100%;*/
+	list-style-type: none;
+	border: 1px solid var(--blue);
+	margin: 0;
+	padding: 0;
+	-webkit-transition: 0.3s;
+	transition: 0.3s;
+}
+
+.ticketprice:hover {
+	box-shadow: 0 0 15px 0 var(--orange);
+	border: 1px solid var(--orange);
+
+}
+
+
+
+/* Pricing header */
+.ticketprice .header .ticketheader {
+	background-color: var(--content-color);
+	color: white;
+	font-size: 25px;
+}
+
+
+
+/* List items */
+.ticketprice li {
+	border-bottom: 1px solid var(--blue);
+	padding: 20px;
+	text-align: center;
+}
+
+/* Grey list item */
+.ticketprice .grey {
+	background-color: var(--deepdarkblue);
+	font-size: 200%;
+	font-weight: bold;
+}
+
+/* The "Sign Up" button */
+.ticketprice .button {
+	background-color: #4CAF50;
+	border: none;
+	color: white;
+	padding: 10px 25px;
+	text-align: center;
+	text-decoration: none;
+	font-size: 18px;
+}
+
+/* Change the width of the three columns to 100%
+(to stack horizontally on small screens) */
+@media only screen and (max-width: 600px) {
+	.columns {
+		width: 100%;
+	}
+}
+
+.addClan-btn{
+	background-color:var(--darkblue);
+}
+.avatarPreview{
+	border: solid 1px var(--text-color);
+	max-width: 100%;
+}
+
